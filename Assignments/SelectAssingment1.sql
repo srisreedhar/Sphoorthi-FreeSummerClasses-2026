@@ -2,7 +2,8 @@
 
 - Use Select & Filter statements to solve the problems below 
 - Run below Create & Insert statements to create and populate the table with data
-- you can Use OneCompil
+- you can Use https://onecompiler.com/postgresql/44nsmvuuf
+
 
 */
 
