@@ -19,7 +19,7 @@ URL : https://sites.google.com/view/sphoorthi-oum
 - The Class Workout files are uploaded in this Repository,
 - Class Recordings were shared in the Whatsapp Group.
 - Class Notes [ClassNotes](Link-To-Be-Updated) is created that has all the Class's running Notes. <br>
-- [Updated CLASS NOTES](Link-To-Be-Updated)
+- Syllabus [Course-Syllabus](https://docs.google.com/spreadsheets/d/1gjcA2-cWaZa727xt7sailQvZ7uSBDGB8-a68fGsbyKg/)
   
 
 Am grateful to His Holiness, Sri Sri Sri Guru ViswaSphoorthi, for blessing us all with this oppertunity to come together and learn something new.
