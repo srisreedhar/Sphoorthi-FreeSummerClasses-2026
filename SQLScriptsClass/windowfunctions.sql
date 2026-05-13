@@ -1,9 +1,55 @@
 /*
 
-Learn about window functions in SQL and how to use them to perform calculations 
-across a set of table rows that are related to the current row.
+Window functions in SQL and how to use them to perform calculations 
+
 Window functions are used to perform calculations across a set of rows that are related to the current row.
- They are often used in conjunction with the OVER() clause, which defines the window of rows that the function should operate on.
+They are often used in conjunction with the OVER() clause, which defines the window of rows that the function should operate on.
+
+Syntax of a window function:
+
+
+function_name (expression) OVER (
+    [PARTITION BY partition_expression]
+    [ORDER BY order_expression]
+    [ROWS frame_specification]
+)
+
+Explanation of the syntax:
+- function_name: The name of the window function you want to use (e.g., ROW_NUMBER(), RANK(), SUM(), etc.).
+
+- expression: The column or expression that the function will operate on.
+
+- OVER(): This clause is used to specify the window over which the function will operate.
+           It can include the following optional components:
+
+- PARTITION BY partition_expression: This clause is optional and is used to divide the result set into partitions.
+                                     The window function will be applied to each partition separately.
+- ORDER BY order_expression: This clause is optional and is used to specify the order of rows within each partition. 
+                            The window function will be applied in the specified order.
+- ROWS frame_specification: This clause is optional and is used to define the frame of rows that the window function will operate on.  
+                             It can specify a range of rows relative to the current row 
+                             (e.g., ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW).  
+
+Example of using window functions:
+
+    ROW_NUMBER() OVER (
+                        PARTITION BY city
+                        ORDER BY sales_amount DESC
+                        ) ,
+    RANK() OVER (
+                 PARTITION BY city 
+                 ORDER BY sales_amount DESC
+                 ) ,
+    DENSE_RANK() OVER (
+                        PARTITION BY city 
+                        ORDER BY sales_amount DESC
+                        ) 
+
+
+
+
+
+
 Some common window functions include: 
 
 Ranking functions such as:
