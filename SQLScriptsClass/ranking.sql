@@ -1,5 +1,5 @@
 /*
-
+Window Functions Part - 2 : Ranking Functions
 Apply Row_number, rank, dense_rank to be below data and find the difference between them.
 
 also try with and without partition by clause.
@@ -65,3 +65,42 @@ INSERT INTO city_sales VALUES
 (28, 'Delhi', 9000),
 (29, 'Delhi', 9000),
 (30, 'Delhi', 16000);
+
+
+-- =========================================
+-- The Above code creates below table,
+-- =========================================
+/*
++---------+-------------+--------------+
+| sale_id | city        | sales_amount |
++---------+-------------+--------------+    
+| 1       | Hyderabad   | 5000         |
+| 2       | Hyderabad   | 7000         |
+| 3       | Hyderabad   | 7000         |
+| 4       | Hyderabad   | 9000         |    
+| 5       | Hyderabad   | 12000        |
+| 6       | Bangalore   | 4000         |
+| 7       | Bangalore   | 6000         |
+| 8       | Bangalore   | 6000         |
+| 9       | Bangalore   | 10000        |
+| 10      | Bangalore   | 15000        |
+| 11      | Chennai     | 3000         | 
+
+*/
+
+-- practice queries below
+
+-- minimum order amount for each city
+-- This query retrieves the minimum order amount for each city, along with the rank of each order
+-- maximum order amount for each city
+-- This query retrieves the maximum order amount for each city, along with the rank of each order
+-- Total sales amount for each city
+-- This query retrieves the total sales amount for each city, along with the rank of each order
+-- total sales amount for each city ordered by order date
+-- This query retrieves the total sales amount for each city, ordered by the order date, along with the rank of each order
+-- Top Sales Orders by Amount
+-- This query retrieves the top 5 sales orders based on the amount, along with their rank.
+-- Top Sales Orders by Amount with Partitioning by City
+-- This query retrieves the top 5 sales orders based on the amount for each city, along with their rank within each city.
+-- Top Sales Orders by Amount with Partitioning by City and Ordering by Order Date
+-- This query retrieves the top 5 sales orders based on the amount for each city, ordered by the order date, along with their rank within each city.
