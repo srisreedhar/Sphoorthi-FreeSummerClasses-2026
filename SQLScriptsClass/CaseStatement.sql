@@ -65,70 +65,63 @@ If the grade does not match any of the specified conditions, it returns a defaul
 -- Table Creation : Student grade classification
 -- =========================================
 
-
 CREATE TABLE students (
     id INTEGER,
     name TEXT,
     age INTEGER,
     city TEXT,
     course TEXT,
-    grade TEXT
+    marks INTEGER
 );
 
 INSERT INTO students VALUES
-(1, 'Ravi', 20, 'Hyderabad', 'SQL', 'Pass'),
-
-(2, 'Sneha', 22, 'Bangalore', 'Python', 'Promoted'),
-
-(3, 'Arjun', 21, 'Chennai', 'SQL', 'Failed'),
-
-(4, 'Priya', 23, 'Mumbai', 'Power BI', 'Pass'),
-
-(5, 'Kiran', 20, 'Pune', 'Python', 'Promoted')
-(6, 'Anjali', 24, 'Delhi', 'SQL', 'Failed')
-(7, 'Rahul', 22, 'Hyderabad', 'Python', 'Pass')
-(8, 'Sanya', 21, 'Bangalore', 'Power BI', 'Promoted')
-(9, 'Vikram', 23, 'Chennai', 'SQL', 'Failed')
-(10, 'Meera', 20, 'Mumbai', 'Python', 'Pass')
-(11, 'Arnav', 24, 'Pune', 'Power BI', 'Promoted')
-(12, 'Isha', 22, 'Delhi', 'SQL', 'Failed')
-(13, 'Karan', 21, 'Hyderabad', 'Python', 'Pass')
-(14, 'Nisha', 23, 'Bangalore', 'Power BI', 'Promoted')
-(15, 'Aditya', 20, 'Chennai', 'SQL', 'Failed')
-(16, 'Sofia', 24, 'Mumbai', 'Python', 'Pass')
-(17, 'Rohan', 22, 'Pune', 'Power BI', 'Promoted')
-(18, 'Ananya', 21, 'Delhi', 'SQL', 'Failed')
-(19, 'Kabir', 23, 'Hyderabad', 'Python', 'Pass')
-(20, 'Maya', 20, 'Bangalore', 'Power BI', 'Promoted')
-(21, 'Dev', 24, 'Chennai', 'SQL', 'Failed')
-(22, 'Aarav', 22, 'Mumbai', 'Python', 'Pass')
-(23, 'Sanya', 21, 'Pune', 'Power BI', 'Promoted')
-(24, 'Vikram', 23, 'Delhi', 'SQL', 'Failed')
-(25, 'Meera', 20, 'Hyderabad', 'Python', 'Pass')
-(26, 'Arnav', 24, 'Bangalore', 'Power BI', 'Promoted')
-(27, 'Isha', 22, 'Chennai', 'SQL', 'Failed')
-(28, 'Karan', 21, 'Mumbai', 'Python', 'Pass')
-(29, 'Nisha', 23, 'Pune', 'Power BI', 'Promoted')
-(30, 'Aditya', 20, 'Delhi', 'SQL', 'Failed')
-(31, 'Sofia', 24, 'Hyderabad', 'Python', 'Pass')
-(32, 'Rohan', 22, 'Bangalore', 'Power BI', 'Promoted')
-(33, 'Ananya', 21, 'Chennai', 'SQL', 'Failed')
-(34, 'Kabir', 23, 'Mumbai', 'Python', 'Pass')
-(35, 'Maya', 20, 'Pune', 'Power BI', 'Promoted')
-(36, 'Dev', 24, 'Delhi', 'SQL', 'Failed')
-(37, 'Aarav', 22, 'Hyderabad', 'Python', 'Pass')
-(38, 'Sanya', 21, 'Bangalore', 'Power BI', 'Promoted')
-(39, 'Vikram', 23, 'Chennai', 'SQL', 'Failed')
-(40, 'Meera', 20, 'Mumbai', 'Python', 'Pass');
-
-
+(1, 'Ravi', 20, 'Hyderabad', 'SQL', 80),
+(2, 'Sneha', 22, 'Bangalore', 'Python',70 ),
+(3, 'Arjun', 21, 'Chennai', 'SQL', 60),
+(4, 'Priya', 23, 'Mumbai', 'Power BI',50 ),
+(5, 'Kiran', 20, 'Pune', 'Python', 50),
+(6, 'Anjali', 24, 'Delhi', 'SQL', 40),
+(7, 'Rahul', 22, 'Hyderabad', 'Python',30 ),
+(8, 'Sanya', 21, 'Bangalore', 'Power BI',25 ),
+(9, 'Vikram', 23, 'Chennai', 'SQL', 60),
+(10, 'Meera', 20, 'Mumbai', 'Python', 80),
+(11, 'Arnav', 24, 'Pune', 'Power BI', 90),
+(12, 'Isha', 22, 'Delhi', 'SQL', 66),
+(13, 'Karan', 21, 'Hyderabad', 'Python', 42),
+(14, 'Nisha', 23, 'Bangalore', 'Power BI', 33),
+(15, 'Aditya', 20, 'Chennai', 'SQL', 24),
+(16, 'Sofia', 24, 'Mumbai', 'Python', 33),
+(17, 'Rohan', 22, 'Pune', 'Power BI', 15),
+(18, 'Ananya', 21, 'Delhi', 'SQL', 96),
+(19, 'Kabir', 23, 'Hyderabad', 'Python', 33),
+(20, 'Maya', 20, 'Bangalore', 'Power BI', 24),
+(21, 'Dev', 24, 'Chennai', 'SQL', 51),
+(22, 'Aarav', 22, 'Mumbai', 'Python', 33),
+(23, 'Sanya', 21, 'Pune', 'Power BI', 27),
+(24, 'Vikram', 23, 'Delhi', 'SQL', 37),
+(25, 'Meera', 20, 'Hyderabad', 'Python', 22),
+(26, 'Arnav', 24, 'Bangalore', 'Power BI', 24),
+(27, 'Isha', 22, 'Chennai', 'SQL', 21),
+(28, 'Karan', 21, 'Mumbai', 'Python', 30),
+(29, 'Nisha', 23, 'Pune', 'Power BI', 15),
+(30, 'Aditya', 20, 'Delhi', 'SQL', 69),
+(31, 'Sofia', 24, 'Hyderabad', 'Python', 54),
+(32, 'Rohan', 22, 'Bangalore', 'Power BI', 51),
+(33, 'Ananya', 21, 'Chennai', 'SQL', 42),
+(34, 'Kabir', 23, 'Mumbai', 'Python', 42),
+(35, 'Maya', 20, 'Pune', 'Power BI', 51),
+(36, 'Dev', 24, 'Delhi', 'SQL', 26),
+(37, 'Aarav', 22, 'Hyderabad', 'Python',31 ),
+(38, 'Sanya', 21, 'Bangalore', 'Power BI',33 ),
+(39, 'Vikram', 23, 'Chennai', 'SQL', 36),
+(40, 'Meera', 20, 'Mumbai', 'Python', 35);
 
 
 -- Practice Queries :
 
--- 1. Classify students based on their grade using CASE statement
--- 2. Classify students based on their age group using CASE statement
--- 3. Classify students based on their city using CASE statement
--- 4. Classify students based on their course using CASE statement
--- 5. Combine multiple conditions in a single CASE statement to classify students based on both grade and age group.
+-- Grade Criteria
+-- below 36 marks - FAILED
+-- 36 to 50 marks - PROMOTED
+-- above 50 marks - PASS
 
+-- Create a column called grade and classify students based on the above criteria using CASE statement
