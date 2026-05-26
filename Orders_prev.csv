@@ -1,0 +1,7 @@
+order_id,customer_name,product_name,quantity,price,order_date,Order_status
+001,Alpha,Health,1,100,15-05-2026,complete
+002,Beta,Medicine,1,200,15-05-2026,complete
+003,Gama,Books,2,500,17-05-2026,complete
+004,Theta,Mobile,1,1111,18-05-2026,Processing
+005,kappa,Laptop,1,101010,19-05-2026,In-Transit
+006,Phi,Books,2,600,20-05-2026,Pending
