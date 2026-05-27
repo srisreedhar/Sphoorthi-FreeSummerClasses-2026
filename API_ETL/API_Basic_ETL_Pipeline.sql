@@ -1,13 +1,17 @@
+-- create Database NAME_of_the_DATABASE
+
+
+
 --raw temporary data
 
-drop schema staging cascade;
+--drop schema staging cascade;
 create schema staging;
 
 
 
 -- clean business-ready data
 
-drop schema prod cascade;
+--drop schema prod cascade;
 create schema prod;
 
 
