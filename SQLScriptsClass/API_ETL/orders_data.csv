@@ -1,0 +1,21 @@
+order_id,customer_name,city,product_name,quantity,price,order_date
+1,Guest User,men's clothing,"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",1,109.95,2025-01-01
+2,Guest User,men's clothing,Mens Casual Premium Slim Fit T-Shirts ,1,22.3,2025-01-01
+3,Guest User,men's clothing,Mens Cotton Jacket,1,55.99,2025-01-01
+4,Guest User,men's clothing,Mens Casual Slim Fit,1,15.99,2025-01-01
+5,Guest User,jewelery,John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet,1,695.0,2025-01-01
+6,Guest User,jewelery,Solid Gold Petite Micropave ,1,168.0,2025-01-01
+7,Guest User,jewelery,White Gold Plated Princess,1,9.99,2025-01-01
+8,Guest User,jewelery,Pierced Owl Rose Gold Plated Stainless Steel Double,1,10.99,2025-01-01
+9,Guest User,electronics,WD 2TB Elements Portable External Hard Drive - USB 3.0 ,1,64.0,2025-01-01
+10,Guest User,electronics,SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s,1,109.0,2025-01-01
+11,Guest User,electronics,Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5,1,109.0,2025-01-01
+12,Guest User,electronics,WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive,1,114.0,2025-01-01
+13,Guest User,electronics,Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin,1,599.0,2025-01-01
+14,Guest User,electronics,Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ,1,999.99,2025-01-01
+15,Guest User,women's clothing,BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats,1,56.99,2025-01-01
+16,Guest User,women's clothing,Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket,1,29.95,2025-01-01
+17,Guest User,women's clothing,Rain Jacket Women Windbreaker Striped Climbing Raincoats,1,39.99,2025-01-01
+18,Guest User,women's clothing,MBJ Women's Solid Short Sleeve Boat Neck V ,1,9.85,2025-01-01
+19,Guest User,women's clothing,Opna Women's Short Sleeve Moisture,1,7.95,2025-01-01
+20,Guest User,women's clothing,DANVOUY Womens T Shirt Casual Cotton Short,1,12.99,2025-01-01
