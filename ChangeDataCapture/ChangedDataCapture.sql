@@ -8,6 +8,8 @@ load only -
 
 capture only changed Data
 
+
+
 YesterDay's Data -> 
 
 order_id | customer | amount | status
@@ -67,7 +69,8 @@ insert into prod.orders
 values
 (101,'Ravi',500,'Processing'),
 (102,'Sneha',900,'Shipped'),
-(103,'Priya',1200,'Delivered');
+(103,'Priya',1200,'Delivered')
+--(104,'Arjun',1500,'Processing');
 
 
 
@@ -83,6 +86,7 @@ values
 
 /*
 
+fresh_data left join old_data
 finding new rows
 
 select s.*
