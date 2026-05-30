@@ -10,26 +10,26 @@ begin;
 
 insert into prod.orders (
 
-    order_id,
-    customer_name,
-    amount,
-    order_status
+        order_id,
+        customer_name,
+        amount,
+        order_status
 
-)
+    )
 
 select
 
-    s.order_id,
-    s.customer_name,
-    s.amount,
-    s.order_status
+        s.order_id,
+        s.customer_name,
+        s.amount,
+        s.order_status
 
-from staging.orders_source s
+    from staging.orders_source s
 
-left join prod.orders p
-on s.order_id = p.order_id
+    left join prod.orders p
+    on s.order_id = p.order_id
 
-where p.order_id is null;
+    where p.order_id is null;
 
 
 ---------------------------------------------------
@@ -38,24 +38,24 @@ where p.order_id is null;
 
 update prod.orders p
 
-set
-    customer_name = s.customer_name,
-    amount = s.amount,
-    order_status = s.order_status
+    set
+        customer_name = s.customer_name,
+        amount = s.amount,
+        order_status = s.order_status
 
-from staging.orders_source s
+    from staging.orders_source s
 
-where p.order_id = s.order_id
+    where p.order_id = s.order_id
 
-and (
+    and (
 
-    p.customer_name <> s.customer_name
-    or
-    p.amount <> s.amount
-    or
-    p.order_status <> s.order_status
+        p.customer_name <> s.customer_name
+        or
+        p.amount <> s.amount
+        or
+        p.order_status <> s.order_status
 
-);
+    );
 
 
 ---------------------------------------------------
@@ -64,13 +64,13 @@ and (
 
 delete from prod.orders p
 
-where not exists (
+    where not exists (
 
-    select 1
-    from staging.orders_source s
-    where s.order_id = p.order_id
+        select 1
+        from staging.orders_source s
+        where s.order_id = p.order_id
 
-);
+    );
 
 
 ---------------------------------------------------
