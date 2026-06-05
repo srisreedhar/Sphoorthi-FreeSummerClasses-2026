@@ -1,4 +1,6 @@
 -- how to check data lineage in snowflake
+-- Screenshot of lineage in Snowflake UI Below -
+-- https://github.com/srisreedhar/Sphoorthi-FreeSummerClasses-2026/blob/5184a7c092b9328d064533ccd6bf89eeffd05594/Images/DataLineage_2026-06-05_132852.png
 
 
 -- NEW BANK Database
@@ -39,3 +41,6 @@ select * from newbank.staging.abc ;
 
 
 select * from superhero_db.prod_tables_schema.lineage_ex;
+
+
+
