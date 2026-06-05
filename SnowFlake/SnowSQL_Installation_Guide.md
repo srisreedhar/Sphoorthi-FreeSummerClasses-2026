@@ -13,7 +13,8 @@
 ### Step 3
 - Click on 1 -> 2 and 3 as shown in the image and copy `account identifier `  & `Login` from  below details
 
-``` account = "HhhhhhG-Ykkkkkk2"
+``` 
+account = "HhhhhhG-Ykkkkkk2"
 user = "SPHOORTHIFREECLASSES"
 authenticator = "externalbrowser"
 role = "ACCOUNTADMIN"
@@ -34,7 +35,8 @@ schema = "<none selected>"
 
 
 
-```C:\Windows\System32>snowsql -a "HaccountG-Yidentifier2" -u "SPHOORTHIFREECLASSES"
+```
+C:\Windows\System32>snowsql -a "HaccountG-Yidentifier2" -u "SPHOORTHIFREECLASSES"
 Password:
 * SnowSQL * v1.4.5
 Type SQL statements or !help
