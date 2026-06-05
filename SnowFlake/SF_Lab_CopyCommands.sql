@@ -12,7 +12,6 @@ FILES = ( '<file_name>','<file_name2>')
 FILE_FORMAT = <file_format_name>
 ON_ERROR = ABORT_STATEMENT | CONTINUE | SKIP_FILE | SKIP_FILE_<number> | SKIP_FILE_<percentage>
 
-
  
 
 */
