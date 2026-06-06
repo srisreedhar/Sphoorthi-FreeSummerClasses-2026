@@ -291,4 +291,35 @@ select  n.raw_json_rows:id::integer as id,
 from nested_json_schema.nested_json_rows as n,
 lateral flatten(input =>  raw_json_rows:prev_company ) as pv;
 
--- join with main table        
+-- table(flatten())
+/*
+
+table(flatten(input => raw_json_rows:spoken_languages)) 
+this command turns the array of json objects into a table structure and 
+we can access the values using value:fieldname
+
+*/
+
+-- turns the JSON array int a temporary table structure and we can access the values using value:fieldname
+
+
+-- spoken languages
+select n.raw_json_rows:id::integer,
+        f.value:language::string,
+        f.value:level::string
+from nested_json_rows n,
+table(flatten( input => raw_json_rows:spoken_languages) ) as f;
+
+
+-- previous compny
+select  n.raw_json_rows:id::integer as id,
+        -- pv.index,
+        pv.value::string as prev_company
+from nested_json_schema.nested_json_rows as n,
+table(flatten(input =>  raw_json_rows:prev_company )) as pv;
+
+
+
+-- join with main table       
+
+
