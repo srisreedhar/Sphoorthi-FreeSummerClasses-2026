@@ -322,4 +322,126 @@ table(flatten(input =>  raw_json_rows:prev_company )) as pv;
 
 -- join with main table       
 
+select  raw_json_rows:id::integer as id,
+        raw_json_rows:city::string as city,
+        raw_json_rows:first_name::string as first_name,
+        raw_json_rows:gender::string as gender,
+        raw_json_rows:job:salary::integer as current_salary,
+        raw_json_rows:job:title::string as current_jobtitle,
+        raw_json_rows:last_name::string as last_name,
+        sl.language,
+        sl.level,
+        prevcomp.prev_company
+from nested_json_schema.nested_json_rows
+left join (
+            select n.raw_json_rows:id::integer as sl_id,
+                    f.value:language::string as language,
+                    f.value:level::string as level
+             from nested_json_rows n,
+            table(flatten( input => raw_json_rows:spoken_languages) ) as f ) as sl
+on id = sl.sl_id
+left join (
+            select  n.raw_json_rows:id::integer as pv_id,
+                    -- pv.index,
+                    pv.value::string as prev_company
+            from nested_json_schema.nested_json_rows as n,
+            table(flatten(input =>  raw_json_rows:prev_company )) as pv ) as prevcomp
+on id = prevcomp.pv_id
+
+
+
+-- the same above query with CTEs
+
+with 
+    sl as (
+             select n.raw_json_rows:id::integer as sl_id,
+                    f.value:language::string as language,
+                    f.value:level::string as level
+             from nested_json_rows n,
+             table(flatten( input => raw_json_rows:spoken_languages) ) as f ),
+    prevcomp as (
+                    select  n.raw_json_rows:id::integer as pv_id,
+                    -- pv.index,
+                    pv.value::string as prev_company
+                    from nested_json_schema.nested_json_rows as n,
+                    table(flatten(input =>  raw_json_rows:prev_company )) as pv )
+
+select  raw_json_rows:id::integer as id,
+        raw_json_rows:city::string as city,
+        raw_json_rows:first_name::string as first_name,
+        raw_json_rows:gender::string as gender,
+        raw_json_rows:job:salary::integer as current_salary,
+        raw_json_rows:job:title::string as current_jobtitle,
+        raw_json_rows:last_name::string as last_name,
+        sl.language,
+        sl.level,
+        prevcomp.prev_company
+from nested_json_schema.nested_json_rows
+left join sl on id = sl.sl_id
+left join prevcomp on id = prevcomp.pv_id;
+
+
+
+-- create table with new columns set and insert values into it
+-- 10 columns
+
+-- duplicate_table
+-- drop table prod_tables_schema.hr_data_clean_2;
+create or replace table prod_tables_schema.hr_data_clean_2
+(
+    id integer,
+    city string,
+    first_name string,
+    gender string,
+    current_salary integer,
+    current_jobtitle string,
+    last_name string,
+    language string,
+    language_level string,
+    prevcompany string
+) cluster by (city);
+
+
+-- insert values into the table prod_tables_schema.hr_data_clean_2
+
+insert into prod_tables_schema.hr_data_clean_2
+with 
+    sl as (
+             select n.raw_json_rows:id::integer as sl_id,
+                    f.value:language::string as language,
+                    f.value:level::string as level
+             from nested_json_rows n,
+             table(flatten( input => raw_json_rows:spoken_languages) ) as f ),
+    prevcomp as (
+                    select  n.raw_json_rows:id::integer as pv_id,
+                    -- pv.index,
+                    pv.value::string as prev_company
+                    from nested_json_schema.nested_json_rows as n,
+                    table(flatten(input =>  raw_json_rows:prev_company )) as pv )
+
+select  raw_json_rows:id::integer as id,
+        raw_json_rows:city::string as city,
+        raw_json_rows:first_name::string as first_name,
+        raw_json_rows:gender::string as gender,
+        raw_json_rows:job:salary::integer as current_salary,
+        raw_json_rows:job:title::string as current_jobtitle,
+        raw_json_rows:last_name::string as last_name,
+        sl.language,
+        sl.level,
+        prevcomp.prev_company
+from nested_json_schema.nested_json_rows
+left join sl on id = sl.sl_id
+left join prevcomp on id = prevcomp.pv_id;
+
+-- verify data
+-- count of rows
+select count(*)
+from prod_tables_schema.hr_data_clean_2;
+
+-- sample data, all rows
+select * 
+from prod_tables_schema.hr_data_clean_2
+where id in (6,11)
+
+
 
