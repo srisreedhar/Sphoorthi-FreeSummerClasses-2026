@@ -1,3 +1,36 @@
+/*
+
+sample JSON structure -> 
+
+{
+        "id":11,
+        "first_name":"Iggie",
+        "last_name":"Pudsall",
+        "gender":"Male",
+        "city":"Maodao",
+        "job":{
+                "title":"Senior Cost Accountant",
+                "salary":30000
+                },
+        "spoken_languages":[
+                                {
+                                  "language":"Swedish",
+                                  "level":"Advanced"
+                                },
+                                {
+                                  "language":"Bislama",
+                                  "level":"Advanced"
+                                }
+                         ],
+        "prev_company":["Luettgen-Nolan","Gulgowski LLC"]
+
+S3 File -> https://bucketsnowflake-jsondemo.s3.amazonaws.com/HR_data.json
+
+*/
+
+
+
+
 show databases;
 use SUPERHERO_DB;
 
