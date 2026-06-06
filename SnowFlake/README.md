@@ -28,6 +28,17 @@ https://bucketsnowflakes3.s3.amazonaws.com/
 
 ---
 
+## Bucket  (Parquet Files)
+
+### Main Bucket
+
+https://snowflakeparquetdemo.s3.amazonaws.com/
+https://snowflakeparquetdemo.s3.amazonaws.com/daily_sales_items.parquet
+
+---
+
+
+
 ## Bucket 2 (CSV Files with Errors & Error Handling )
 
 ### Main Bucket
