@@ -47,6 +47,15 @@ https://bucketsnowflakes4.s3.amazonaws.com/
 
 ---
 
+## Bucket  (Rejected Rows Loading / Error Rows )
+
+### Main Bucket
+
+
+https://snowflakebucket-copyoption.s3.amazonaws.com/
+
+---
+
 # 2. CSV Files for Practice
 
 ## Loan Payments Dataset
