@@ -249,5 +249,6 @@ COPY INTO csvfilesdb.rawdata_schema.ORDERS
 
 select count(*) from csvfilesdb.rawdata_schema.ORDERS;
 
-
 truncate table csvfilesdb.rawdata_schema.ORDERS;
+
+-- re-run these commands yourself on stages
