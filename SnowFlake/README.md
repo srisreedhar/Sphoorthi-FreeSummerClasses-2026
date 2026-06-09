@@ -126,6 +126,7 @@ https://s3.amazonaws.com/tripdata/
 https://s3.amazonaws.com/tripdata/index.html
 
 
+#### More than 26GB of Trip Data available in the S3 bucket
 ---
 
 # 6. Snowflake Workshop Lab
