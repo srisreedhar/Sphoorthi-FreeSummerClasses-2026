@@ -56,6 +56,16 @@ https://snowflakebucket-copyoption.s3.amazonaws.com/
 
 ---
 
+
+## Bucket  ( Size Limit )
+
+### Main Bucket
+
+
+https://snowflakebucket-copyoption.s3.amazonaws.com/size
+
+---
+
 # 2. CSV Files for Practice
 
 ## Loan Payments Dataset
@@ -112,6 +122,8 @@ https://snowflake-docs.s3.amazonaws.com/tutorials/json/server/2.6/2016/07/15/15/
 ## NYC Citibike Trip Data
 
 https://s3.amazonaws.com/tripdata/
+
+https://s3.amazonaws.com/tripdata/index.html
 
 
 ---
